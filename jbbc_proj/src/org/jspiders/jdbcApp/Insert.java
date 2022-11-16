@@ -1,13 +1,16 @@
 package org.jspiders.jdbcApp;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-public class jdbcDemo {
+public class Insert {
 	public static void main(String args[])
 	{
 		Connection con=null;
 		Statement stmt=null;
-		String qry="update btm.student set Name='Ajay' where id=4";
+		String qry="insert btm.student values(6,'shivani',68.5)";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("Drive class loaded&Registered");
@@ -16,7 +19,7 @@ public class jdbcDemo {
 			stmt=con.createStatement();
 			System.out.println("Platform Created");
 			stmt.executeUpdate(qry);
-			System.out.println("Data Update!!!!!!");
+			System.out.println("insert data!!!!!!");
 		}
 		catch(ClassNotFoundException | SQLException e)
 		{
