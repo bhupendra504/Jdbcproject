@@ -7,7 +7,7 @@ public class jdbcDemo {
 	{
 		Connection con=null;
 		Statement stmt=null;
-		String qry="update btm.student set Name='Ajay' where id=4";
+		String qry="update btm.student set Name='Chinmay' where id=4";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("Drive class loaded&Registered");
